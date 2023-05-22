@@ -63,7 +63,7 @@ setInterval(function () {
             // add new pipe to last of array
             pipes.push(giveMePipe())
             if (!hasCollided) {
-                score++;
+                score = score + 1;
             }
             // console.log("Score is: " + score)
         }
@@ -99,7 +99,7 @@ function giveMePipe() {
         var lastPipe = pipes[pipes.length - 1]
         leftOffset = lastPipe.topPipe.left + pipeHorizontalGap;
     }
-
+ 
     return {
         topPipe: {
             top: 0,
@@ -133,4 +133,3 @@ function checkCollision(box1, box2) {
     }
 
 }
-
